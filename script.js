@@ -6,20 +6,19 @@ const movies = [
     year: 2024,
     rating: 7.9,
     genre: "Драма",
-    desc: "Фильм о невероятных событиях.",
-    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ15Z1oXzJ_cs70IlOeNd5FHB1mvpgya4wIEg&s"  // ← ВОТ ССЫЛКА НА ФОТО
+    desc: "Фильм о невероятных событиях, произошедших в тихом городке.",
+    poster: "images/movie1.jpg"  // ← ВОТ ЗДЕСЬ ССЫЛКА НА ТВОЮ КАРТИНКУ
   },
   {
     id: 2,
-    title: "Феникс",
+    title: "Операция Феникс",
     year: 2025,
-    rating: 8.1,
+    rating: 8.3,
     genre: "Экшн",
-    desc: "Секретная операция.",
-    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU4CwpFGIvFUOPCY4vmNG6i7gGoLsCiPMRRQ&s"  // ← ТУТ ТОЖЕ ССЫЛКА
+    desc: "Группа спецагентов выполняет секретную миссию.",
+    poster: "images/movie2.png"  // ← ВТОРАЯ КАРТИНКА, ЕСЛИ ЕСТЬ
   }
 ];
-
 
 // Генерация карточек
 function renderMovies(list) {
@@ -68,3 +67,4 @@ function openMovie(id) {
 document.getElementById("modalClose").onclick = () => {
   document.getElementById("modal").style.display = "none";
 };
+
