@@ -29,12 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id:3,
-      title:'Комедия на вырост',
+      title:' Папа на вырост',
       year:2023,
       rating:6.8,
       genre:'Комедия',
-      desc:'Лёгкая семейная комедия с неожиданным финалом и добрыми героями.'
-      // без poster — будет градиент
+      desc:'Лёгкая семейная комедия с неожиданным финалом и добрыми героями.',
+      poster: 'https://media.myshows.me/shows/1920/5/7d/57d22e32f0881143bcf4efc9f732abf1.jpg' 
+      
     },
     {
       id:4,
@@ -42,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
       year:2022,
       rating:7.5,
       genre:'Криминал / Драма',
-      desc:'Глубокий криминальный триллер о решениях, которые меняют судьбы.'
+      desc:'Глубокий криминальный триллер о решениях, которые меняют судьбы.',
+       poster: https://i.ytimg.com/vi/Nwt7DwtOrDg/maxresdefault.jpg
     },
     {
       id:5,
