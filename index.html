@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Кинотеатр — Онлайн афиша</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Кинотеатр</h1>
+      <div class="controls">
+        <input id="search" type="search" placeholder="Поиск фильмов, жанр или год..." />
+        <button id="toggleTheme" class="btn small">Тёмная</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="hero">
+      <h2>Смотрите лучшие премьеры</h2>
+      <p>Афиша, рейтинги и описание — всё в одном месте.</p>
+    </section>
+
+    <section>
+      <h3>Фильмы</h3>
+      <div id="movies" class="movies-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <!-- Modal for movie details -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button id="modalClose" class="modal-close" aria-label="Закрыть">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Кинотеатр. Демонстрационная страница.</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
