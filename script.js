@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating:7.1,
       genre:'Хоррор',
       desc:'Исатай ауылын құтқару үшін қауіпті жолға шығып, ішкі жан дүние мен тағдыр таңдауымен бетпе-бет келеді.  ￼.',
-      poster: 'https://adamdar.ca/media/Image%20library/2022/2022%20news/2022.12%20Zira_Qash/photo_2022-12-09_17-08-16.jpg'
+      poster: 'https://adamdar.ca/media/Image%20library/2022/2022%20news/2022.12%20Zira_Qash/photo.jpg'
     }
   ];
 
