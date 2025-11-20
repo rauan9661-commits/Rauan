@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating:7.5,
       genre:'Криминал / Драма',
       desc:'Глубокий криминальный триллер о решениях, которые меняют судьбы.',
-       poster: https://i.ytimg.com/vi/Nwt7DwtOrDg/maxresdefault.jpg
+       poster: 'https://i.ytimg.com/vi/Nwt7DwtOrDg/maxresdefault.jpg'
     },
     {
       id:5,
