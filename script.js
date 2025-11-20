@@ -62,6 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
       genre:'Драма',
       desc:'  15 жыл бұрын метро жарылысынан жоғалып кеткен Расул күтпеген сәтте үйіне оралады.',
        poster: 'https://avatars.mds.yandex.net/get-entity_search/6711483/1212072645/S600xU_2x'
+    },
+    { 
+      id:5,
+      title:'Өш',
+      year:2025,
+      rating:7.1,
+      genre:'Драма /Трейлер',
+      desc:'  Қырғызстанның шалғай ауылында тұратын Жылдыз атты жас қыз қатігез зорлық-зомбылықтың құрбаны болады..',
+       poster: 'https://i.ytimg.com/vi/D-cKNQQH3FI/maxresdefault.jpg'
     }
   ];
 
