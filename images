@@ -1,0 +1,8 @@
+проект/
+│ index.html
+│ styles.css
+│ script.js
+└─ images/
+      movie1.jpg
+      movie2.png
+      …
