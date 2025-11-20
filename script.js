@@ -54,6 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
       genre:'Хоррор',
       desc:'Исатай ауылын құтқару үшін қауіпті жолға шығып, ішкі жан дүние мен тағдыр таңдауымен бетпе-бет келеді.  ￼.',
       poster: 'https://avatars.mds.yandex.net/i?id=523f2db9da72d23871a052dc52dfad17_l-9098836-images-thumbs&n=13'
+    },
+    {id:5,
+      title:'№37',
+      year:2025,
+      rating:7.1,
+      genre:'Драма',
+      desc:'  15 жыл бұрын метро жарылысынан жоғалып кеткен Расул күтпеген сәтте үйіне оралады.'
+      poster: 'https://avatars.mds.yandex.net/get-entity_search/6711483/1212072645/S600xU_2x'
     }
   ];
 
