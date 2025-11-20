@@ -48,11 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id:5,
-      title:'Мелодия утра',
-      year:2021,
+      title:'Қаш',
+      year:2022,
       rating:7.1,
-      genre:'Мюзикл / Романтика',
-      desc:'История о музыке, вдохновении и первой любви.'
+      genre:'Хоррор',
+      desc:'Исатай ауылын құтқару үшін қауіпті жолға шығып, ішкі жан дүние мен тағдыр таңдауымен бетпе-бет келеді.  ￼.',
+      poster: 'https://adamdar.ca/media/Image%20library/2022/2022%20news/2022.12%20Zira_Qash/photo_2022-12-09_17-08-16.jpg'
     }
   ];
 
