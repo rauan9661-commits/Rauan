@@ -10,23 +10,46 @@ document.addEventListener('DOMContentLoaded', () => {
   // Пример данных — добавьте свои фильмы/постеры
   const movies = [
     {
-      id:1, title:'Ночное небо', year:2024, rating:7.9, genre:'Драма / Фантастика',
-      desc:'Эмоциональная история о семье и космосе, с яркой визуальной эстетикой.'
+      id:1,
+      title:'Ночное небо',
+      year:2024,
+      rating:7.9,
+      genre:'Драма / Фантастика',
+      desc:'Эмоциональная история о семье и космосе, с яркой визуальной эстетикой.',
+      poster: 'https://static.hdrezka.ac/i/2022/5/2/zaa9fb3347084ki82w60c.png' // пример: локальный файл из контейнера
     },
     {
-      id:2, title:'Операция: Феникс', year:2025, rating:8.3, genre:'Экшн / Триллер',
-      desc:'Динамичный боевик о группе агентов, которые планируют невыполнимую операцию.'
+      id:2,
+      title:'Операция: Феникс',
+      year:2025,
+      rating:8.3,
+      genre:'Экшн / Триллер',
+      desc:'Динамичный боевик о группе агентов, которые планируют невыполнимую операцию.',
+      poster: 'https://www.kino-teatr.ru/movie/posters/big/5/8/159285.jpg' // пример: картинка по ссылке
     },
     {
-      id:3, title:'Комедия на вырост', year:2023, rating:6.8, genre:'Комедия',
+      id:3,
+      title:'Комедия на вырост',
+      year:2023,
+      rating:6.8,
+      genre:'Комедия',
       desc:'Лёгкая семейная комедия с неожиданным финалом и добрыми героями.'
+      // без poster — будет градиент
     },
     {
-      id:4, title:'Тени города', year:2022, rating:7.5, genre:'Криминал / Драма',
+      id:4,
+      title:'Тени города',
+      year:2022,
+      rating:7.5,
+      genre:'Криминал / Драма',
       desc:'Глубокий криминальный триллер о решениях, которые меняют судьбы.'
     },
     {
-      id:5, title:'Мелодия утра', year:2021, rating:7.1, genre:'Мюзикл / Романтика',
+      id:5,
+      title:'Мелодия утра',
+      year:2021,
+      rating:7.1,
+      genre:'Мюзикл / Романтика',
       desc:'История о музыке, вдохновении и первой любви.'
     }
   ];
@@ -49,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filtered = movies.filter(m => {
       if(!q) return true;
       return m.title.toLowerCase().includes(q) ||
-             m.genre.toLowerCase().includes(q) ||
+             (m.genre && m.genre.toLowerCase().includes(q)) ||
              String(m.year).includes(q);
     });
     if(filtered.length === 0){
@@ -59,12 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
     filtered.forEach((m, i) => {
       const card = document.createElement('button');
       card.className = 'movie-card';
-      card.setAttribute('aria-label', `${m.title}, ${m.genre}, ${m.year}`);
+      card.setAttribute('aria-label', `${m.title}, ${m.genre || ''}, ${m.year}`);
+
+      // если есть poster — используем его, иначе градиент
+      const bg = m.poster
+        ? `url('${encodeURI(m.poster)}') center/cover no-repeat`
+        : posterStyle(i);
+
       card.innerHTML = `
-        <div style="position:absolute;inset:0;filter:brightness(.9);background:${posterStyle(i)}"></div>
+        <div style="position:absolute;inset:0;filter:brightness(.9);background:${bg}"></div>
         <div class="movie-meta" style="position:relative">
           <h4 class="movie-title">${m.title}</h4>
-          <div class="movie-sub">${m.genre} · ${m.year} · Рейтинг ${m.rating}</div>
+          <div class="movie-sub">${m.genre || '—'} · ${m.year} · Рейтинг ${m.rating}</div>
         </div>
       `;
       // открытие модалки
@@ -74,11 +103,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function openModal(movie, index){
+    // если есть poster — использовать как фон, иначе градиент с текстом
+    const posterHtml = movie.poster
+      ? `<div class="poster" style="background:url('${encodeURI(movie.poster)}') center/cover no-repeat"></div>`
+      : `<div class="poster" style="background:${posterStyle(index)}">${movie.title}</div>`;
+
     modalBody.innerHTML = `
-      <div class="poster" style="background:${posterStyle(index)}">${movie.title}</div>
+      ${posterHtml}
       <div class="modal-info">
         <h3>${movie.title}</h3>
-        <div class="meta-row">${movie.genre} • ${movie.year} • Рейтинг ${movie.rating}</div>
+        <div class="meta-row">${movie.genre || '—'} • ${movie.year} • Рейтинг ${movie.rating}</div>
         <p>${movie.desc}</p>
         <div style="margin-top:12px">
           <button class="btn" onclick="alert('Билеты: демонстрация')">Купить билет</button>
