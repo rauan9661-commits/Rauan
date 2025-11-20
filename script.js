@@ -39,11 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id:4,
-      title:'Тени города',
-      year:2022,
+      title:'Менің атым қожа',
+      year:"1963",
       rating:7.5,
-      genre:'Криминал / Драма',
-      desc:'Глубокий криминальный триллер о решениях, которые меняют судьбы.',
+      genre:'Повесть',
+      desc:'Бұл — мектепте оқитын тентек, бірақ жүрегі таза бала.',
        poster: 'https://i.ytimg.com/vi/Nwt7DwtOrDg/maxresdefault.jpg'
     },
     {
