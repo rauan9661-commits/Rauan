@@ -80,6 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
       genre:'Комедия/Шытырман',
       desc:' Қарт ерлі-зайыптылар немересінің бітіру кешіне қатысу үшін Қазақстаннан Еуропаға автостоппен барады.',
        poster: 'https://avatars.mds.yandex.net/i?id=463da6108353276b92aeb27e53d7d4ac_l-9802303-images-thumbs&n=13'
+    },
+    { 
+      id:5,
+      title:'Капитан Байтасов',
+      year:2025,
+      rating:7.6,
+      genre:'Жанр: драма, экшн',
+      desc:' Полиция капитаны Ғазиз Байтасов 2011 жылы Таразда лаңкесті тоқтатып, өз өмірін құрбан етеді, сонда ондаған адамды құтқарады.',
+       poster: 'https://storage.kinoteatr.kz/films/original/2239.jpg'
     }
   ];
 
