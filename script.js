@@ -71,6 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
       genre:'Драма /Трейлер',
       desc:'  Қырғызстанның шалғай ауылында тұратын Жылдыз атты жас қыз қатігез зорлық-зомбылықтың құрбаны болады..',
        poster: 'https://i.ytimg.com/vi/D-cKNQQH3FI/maxresdefault.jpg'
+    },
+    { 
+      id:5,
+      title:'Сәлем европа',
+      year:2024,
+      rating:7.1,
+      genre:'Комедия/Шытырман',
+      desc:' Қарт ерлі-зайыптылар немересінің бітіру кешіне қатысу үшін Қазақстаннан Еуропаға автостоппен барады.',
+       poster: 'https://avatars.mds.yandex.net/i?id=463da6108353276b92aeb27e53d7d4ac_l-9802303-images-thumbs&n=13'
     }
   ];
 
